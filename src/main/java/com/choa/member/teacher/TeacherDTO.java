@@ -8,6 +8,8 @@ import com.choa.member.MemberDTO;
 
 public class TeacherDTO extends MemberDTO {
 
+
+
 	private String tid;
 	private String subject;
 	private Date hiredate;
@@ -31,6 +33,12 @@ public class TeacherDTO extends MemberDTO {
 	public void setHiredate(Date hiredate) {
 		this.hiredate = hiredate;
 	}
+	
+	
+	
+	
+	
+	
 	
 	
 	

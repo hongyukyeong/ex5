@@ -1,6 +1,8 @@
 package com.choa.member.student;
 
-public class StudentDTO {
+import com.choa.member.MemberDTO;
+
+public class StudentDTO extends MemberDTO {
 	
 	private String sid;
 	private String phone;
@@ -10,8 +12,8 @@ public class StudentDTO {
 	public String getSid() {
 		return sid;
 	}
-	public void setSid(String sid) {
-		this.sid = sid;
+	public void setSid(String sId) {
+		this.sid = sId;
 	}
 	public String getPhone() {
 		return phone;
