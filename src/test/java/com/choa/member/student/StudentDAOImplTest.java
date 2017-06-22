@@ -2,6 +2,8 @@ package com.choa.member.student;
 
 import static org.junit.Assert.*;
 
+import javax.servlet.http.HttpSession;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,7 @@ public class StudentDAOImplTest extends MyabstractTestUnit {
 	
 	@Autowired	
 	private StudentDAOImpl dao;
+	private static MemberDTO memberDTO;
 	private static StudentDTO studentDTO;
 	
 	@Autowired
@@ -23,29 +26,29 @@ public class StudentDAOImplTest extends MyabstractTestUnit {
 	@Test
 	public void test() throws Exception{
 		
-		int result = studentServiceImpl.memberJoin(studentDTO);
-		System.out.println(studentDTO);
-		
-		assertEquals(1, result);
+		StudentDTO memberDTO=(StudentDTO)dao.test(studentDTO);
+		System.out.println(memberDTO.getName());
+		System.out.println(memberDTO.getPhone());
 		
 	}
 	
 	@BeforeClass //클래스가 시작하기 전에 해줘라
 	public static void makeStudent() throws Exception {
 		
-		studentDTO = new StudentDTO();
+		studentDTO= new StudentDTO();
 		
 		
-		studentDTO.setId("choachoa6");
-		studentDTO.setPw("choachoa");
-		studentDTO.setName("choachoa");
+		studentDTO.setId("student");
+		studentDTO.setPw("student");
+		studentDTO.setName("student");
 		studentDTO.setAge(22);
-		studentDTO.setGrade("s");
-		studentDTO.setFilename("choachoa");
-		studentDTO.setOriname("choachoa");
-		studentDTO.setSid("choachoa6");
-		studentDTO.setPhone("choachoa");
-		studentDTO.setTid("choachoa");
+		studentDTO.setGrade("student");
+		studentDTO.setFilename("student");
+		studentDTO.setOriname("student");
+		studentDTO.setPhone("01012345678");
+		studentDTO.setTid("teacher");
+		
+	
 
 		
 		

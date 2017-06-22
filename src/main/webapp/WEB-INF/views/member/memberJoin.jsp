@@ -48,7 +48,7 @@
 		
 		<!-- student전용 -->
 		<div id="s">
-			<p>SID : <input type="text" name="sid"></p>
+			
 			<p>PHONE : <input type="text" name="phone"></p>
 			<p>TID : <input type="text" name="tid"></p>
 		</div>

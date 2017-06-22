@@ -4,17 +4,12 @@ import com.choa.member.MemberDTO;
 
 public class StudentDTO extends MemberDTO {
 	
-	private String sid;
+	
 	private String phone;
 	private String tid;
 	
 	
-	public String getSid() {
-		return sid;
-	}
-	public void setSid(String sId) {
-		this.sid = sId;
-	}
+	
 	public String getPhone() {
 		return phone;
 	}

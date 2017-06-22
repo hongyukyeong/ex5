@@ -8,9 +8,16 @@
   <!-- insert id = join -->
   	
   	<insert id="joinTeacher" parameterType="com.choa.member.teacher.TeacherDTO">
-  		insert into teacher values(#{tid}, #{subject}, sysdate)
+  		insert into teacher values(#{id}, #{subject}, sysdate)
   	</insert>
-  
   	
+  	<select id="memberLogin" parameterType="com.choa.member.MemberDTO" resultType="com.choa.member.student.StudentDTO">
+  		select m.*,t.* from member m, teacher t where m.id=t.tid and m.id=#{id} and m.pw=#{pw}
+  	</select>
+  	
+  
+  	<select id="memberPage" parameterType="java.lang.String" resultType="com.choa.member.teacher.TeacherDTO">
+  		select * from teacher where tid=#{id}
+  	</select>
   	
   </mapper>

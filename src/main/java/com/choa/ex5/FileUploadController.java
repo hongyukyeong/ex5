@@ -55,10 +55,11 @@ public class FileUploadController {
 	public void fileUpload3(FileDTO fileDTO, HttpSession session)throws Exception{
 		FileSaver fs = new FileSaver();
 		String realPath = session.getServletContext().getRealPath("resources/upload");
-		String oriName = fileDTO.getF1().getOriginalFilename();
-		byte [] fileDate = fileDTO.getF1().getBytes();
+		/*String oriName = fileDTO.getF1().getOriginalFilename();*/
+		/*byte [] fileDate = fileDTO.getF1().getBytes();*/
 		
-		fs.filesave(realPath, oriName, fileDate);
+		
+		fs.filesave(realPath, fileDTO.getF1());
 	}
 	
 	
